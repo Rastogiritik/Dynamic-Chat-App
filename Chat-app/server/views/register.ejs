@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- this is the link of socket.io for the frontend -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js" integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="form-box2">
+        <h1>Register</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input 
+                class="input-box2"
+                type="text" 
+                name="name" 
+                placeholder="Name" 
+                required
+            >
+            <br><br>
+            <input 
+                class="input-box2"
+                type="text" 
+                name="email" 
+                placeholder="Email" 
+                required
+            >
+            <br><br>
+            <input 
+                class="input-box2"
+                type="file" 
+                name="image" 
+                required
+            >
+            <br><br>   
+            <input 
+                class="input-box2"
+                type="password" 
+                name="password" 
+                placeholder="Password" 
+                required
+            >
+            <br><br>   
+            <input 
+                class="input-button2"
+                type="submit" 
+                value="Register" 
+            >  
+        </form>
+        <%
+            if(typeof message !== 'undefined'){
+
+                %>
+                    <p class="error"> <%= message %> </p>
+                <%
+
+            }
+        %>
+    </div>
+</body>
+</html>
